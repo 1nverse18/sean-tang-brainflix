@@ -1,0 +1,18 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts';
+
+.header {
+
+&__logo {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0.8rem 0 0.8rem 0;
+}
+
+@include desktop {
+    &__logo {
+        margin: 0.8rem 15rem 0.8rem 0;
+    }
+}
+}

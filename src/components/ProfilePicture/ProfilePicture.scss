@@ -1,0 +1,20 @@
+@use '../../styles/partials/fonts';
+@use '../../styles/partials/mixins' as *;
+.header {
+
+&__profile-picture {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 1rem;
+}
+
+@include tablet {
+&__profile-picture {
+       display: flex;
+       align-items: center;
+}
+        
+}
+}

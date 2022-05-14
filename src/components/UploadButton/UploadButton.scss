@@ -1,0 +1,27 @@
+@use '../../styles/partials/fonts';
+@use '../../styles/partials/mixins' as *;
+
+.header {
+&__upload-button {
+    color: white;
+    background-color: #0095FF;
+    border-radius: 4px;
+    height: 2.3rem;
+    border-width: 0;
+    width: 17rem;
+    background-image: url(../../assets/images/upload.svg);
+    background-repeat: no-repeat;
+    background-position: 3% 50%;
+    margin: 0 1rem 0 1rem;
+    font-family: 'AvenirNext LT Pro Demi';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@include desktop {
+    &__upload-button {
+      
+    }
+}
+}

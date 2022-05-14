@@ -1,9 +1,10 @@
 import BrainFlixLogo from '../../assets/images/BrainFlix-logo.svg'
+import './Logo.scss'
 function Logo() {
     return (
-        <>
-        <img src={BrainFlixLogo} className="header__logo"></img>
-        </>
+        <div className="header__logo">
+        <img src={BrainFlixLogo} ></img>
+        </div>
     );
   }
   

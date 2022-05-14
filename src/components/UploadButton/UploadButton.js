@@ -1,8 +1,8 @@
-import UploadIcon from "../../assets/images/upload.svg"
+import './UploadButton.scss';
 function UploadButton() {
     return (
         <>
-        <button type="submit"><img src={UploadIcon}></img>Upload</button>
+        <button className="header__upload-button" type="submit">UPLOAD</button>
         </>
     );
   }
