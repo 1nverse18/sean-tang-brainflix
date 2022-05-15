@@ -23,7 +23,7 @@ class App extends Component {
       <div>
       <Header />
       <Video activeVideo={VideoDetails[activeVideo]} />
-      <UnderVideo activeVideo={VideoDetails[activeVideo]}/>
+      <UnderVideo activeVideo={VideoDetails[activeVideo]} newId={this.newId} sideVideos={SideVideos}/>
       </div>
     )
   }
