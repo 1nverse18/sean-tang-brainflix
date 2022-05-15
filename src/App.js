@@ -4,6 +4,7 @@ import VideoDetails from './data/video-details.json';
 import SideVideos from './data/videos.json';
 import { Component } from 'react';
 import Video from './components/Video/Video';
+import UnderVideo from './components/UnderVideo/UnderVideo';
 
 class App extends Component {
 
@@ -22,6 +23,7 @@ class App extends Component {
       <div>
       <Header />
       <Video activeVideo={VideoDetails[activeVideo]} />
+      <UnderVideo activeVideo={VideoDetails[activeVideo]}/>
       </div>
     )
   }
