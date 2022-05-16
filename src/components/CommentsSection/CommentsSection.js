@@ -6,7 +6,7 @@ import CommentsInput from '../CommentsInput/CommentsInput';
 function CommentsSection(props){
     return (
         <section className="comments-section">
-            <p>{props.videoComments.length} Comments</p>
+            <p className='comments-section__comment-number'>{props.videoComments.length} Comments</p>
             <CommentsInput />
             {props.videoComments.map((element, index) => <ExistingComments videoComments={element} key={index}/>)}
         </section>

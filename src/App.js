@@ -16,6 +16,10 @@ class App extends Component {
     videoId: VideoDetails[0].id
   };
 
+  componentDidMount() {
+    document.title = "Sean Tang Brainflix"; 
+ }
+
   render() {
     const activeVideo = VideoDetails.findIndex(element => element.id === this.state.videoId);
   

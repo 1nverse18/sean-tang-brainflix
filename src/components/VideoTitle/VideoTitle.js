@@ -1,4 +1,5 @@
 import React from 'react'; 
+import './VideoTitle.scss';
 
 function VideoInfo(props) {
     return (

@@ -1,0 +1,32 @@
+.side-videos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 17rem;
+
+    &__image-wrapper {
+        width: 40%;
+        height: 4.5rem;
+    }
+
+    &__image {
+        width: 8rem;
+        height: inherit;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: 0.8rem;
+    }
+
+    &__name {
+        font-size: 0.8rem;
+        font-family: 'AvenirNext LT Pro';
+    }
+
+    &__text-wrapper {
+        width: 8rem;
+    }
+    
+}

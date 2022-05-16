@@ -1,4 +1,5 @@
 import React from "react";
+import './VideoDescription.scss';
 
 function VideoDescription(props) {
     return (

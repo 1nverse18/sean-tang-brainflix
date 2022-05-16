@@ -1,0 +1,17 @@
+@use '../../styles/partials/mixins' as *;
+
+.video {
+    &__title {
+        font-family: 'AvenirNext LT Pro Demi';
+        font-size: 1.8rem;
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 1rem;
+    }
+
+    @include tablet {
+        &__title {
+            border: 0;
+            padding: 0;
+        }
+    }
+}

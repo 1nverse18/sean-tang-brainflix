@@ -1,6 +1,6 @@
 import React from 'react';
 import SideVideos from '../SideVideos/SideVideos';
-import './SideVideosSection';
+import './SideVideosSection.scss';
 
 function SideVideosSection(props) {
     const newVideoList = props.sideVideos.filter(element => element.id != props.activeVideo);

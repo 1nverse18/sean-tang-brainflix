@@ -1,0 +1,64 @@
+@use '../../styles/partials/mixins' as *;
+.video-info {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #E1e1e1;
+    }
+
+    &__views {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__likes {
+        display: flex;
+    }
+
+    &__text {
+        color: #afafaf;
+        font-size: 1rem;
+        font-family: 'AvenirNext LT Pro';
+    }
+
+    &__author {
+        font-size: 1rem;
+        padding-bottom: 0.8rem;
+    }
+
+    &__icon {
+        padding-right: 0.4rem;
+    }
+
+    @include tablet {
+        &__section-two {
+            display: flex;
+            padding-right: 1rem;
+            align-items: center;
+
+        }
+
+
+        &__section-one {
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+
+        &__author {
+            padding-right: 2rem;
+            padding-bottom: 0;
+        }
+
+        &__text {
+            padding-top: 0.5rem;
+        }
+
+        &__icon {
+            padding-top: 0.5rem;
+            padding-left: 2rem;
+        }
+    }
+}

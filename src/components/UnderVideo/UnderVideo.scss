@@ -1,0 +1,12 @@
+@use '../../styles/partials/mixins' as *;
+.under-video {
+    &__wrapper {
+        margin: 0 1rem 0 1rem;
+    }
+
+    @include desktop {
+        &__wrapper {
+            display: flex;
+        }
+    }
+}
