@@ -6,7 +6,7 @@ function SideVideosSection(props) {
     const newVideoList = props.sideVideos.filter(element => element.id != props.activeVideo);
 
     const sideVideoFunction = newVideoList.map((element) => {
-        return <SideVideos sideVideos={element} key={element.id} newId={props.newId} />
+        return <SideVideos sideVideos={element} key={element.id} newId={props.newId} routerProps={props.routerProps} />
     })
 
     return (

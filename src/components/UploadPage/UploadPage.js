@@ -14,8 +14,8 @@ class UploadPage extends Component {
 
         return (
         <div className="upload-video">
-            <h1>Upload Video</h1>
-            <h1>Video Thumbnail</h1>
+            <h1 className="upload-video__title">Upload Video</h1>
+            <h1 className="upload-video__thumbnail-title">VIDEO THUMBNAIL</h1>
             <div>
                 <img src={Thumbnail} className="upload-video__thumbnail"/>
                 <form className="upload-video__form">
@@ -30,9 +30,10 @@ class UploadPage extends Component {
                     <Link to="/" className="publish-button">
                         <button type="submit" className="upload-video__button">
                             <img src={UploadIcon} alt="upload-icon"/>
-                            <h1>Publish</h1>
+                            <h1>PUBLISH</h1>
                         </button>
                     </Link>
+                    <p>CANCEL</p>
                 </form>
             </div>
         </div>
