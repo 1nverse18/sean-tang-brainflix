@@ -5,13 +5,14 @@ import SideVideosSection from '../SideVideosSection/SideVideosSection';
 import './UnderVideo.scss';
 
 function UnderVideo(props) {
+
     return (
         <div className="under-video__wrapper">
             <div>
-            <VideoDetails activeVideo={props.activeVideo} />
-            <CommentsSection videoComments={props.activeVideo.comments}/>
+            <VideoDetails activeVideo={props.activeVideo.id} routerProps={props.routerProps} videoInfo={props.videoInfo} />
+            <CommentsSection activeVideo={props.activeVideo.id} routerProps={props.routerProps} videoInfo={props.videoInfo}/>
             </div>
-            <SideVideosSection newId={props.newId} sideVideos={props.sideVideos} activeVideo={props.activeVideo.id}/>
+            <SideVideosSection newId={props.newId} sideVideos={props.sideVideos} activeVideo={props.activeVideo.id} routerProps={props.routerProps}/>
         </div>
     )
 }

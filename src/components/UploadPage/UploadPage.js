@@ -11,6 +11,8 @@ class UploadPage extends Component {
     }
 
     render(){
+
+        return (
         <div className="upload-video">
             <h1>Upload Video</h1>
             <h1>Video Thumbnail</h1>
@@ -34,6 +36,7 @@ class UploadPage extends Component {
                 </form>
             </div>
         </div>
+        )
     }
 }
 

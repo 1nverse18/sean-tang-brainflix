@@ -1,9 +1,11 @@
 import './UploadButton.scss';
+import { Link } from 'react-router-dom';
+
 function UploadButton() {
     return (
-        <>
-        <button className="header__upload-button" type="submit">UPLOAD</button>
-        </>
+        <Link to='/upload'>
+        <button className="header__upload-button" type="submit"><p className='header__upload-button-text'>UPLOAD</p></button>
+        </Link>
     );
   }
   

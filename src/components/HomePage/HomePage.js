@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Video from '../Video/Video';
 import axios from 'axios';
+import UnderVideo from '../UnderVideo/UnderVideo';
 
 
 let apiKey = "21f250aa-1b72-4cf4-8711-95c9fb6f8d5f";
 class HomePage extends Component {
     
-    newId = (id) => {
-        this.setState({videoId: id})
-      }
+
     
       state = {
         videoId: null,
@@ -16,10 +15,14 @@ class HomePage extends Component {
         videoInfo: []
       };
 
+      newId = (id) => {
+        this.setState({videoId: id})
+      }
+
       getVideo() {
         axios.get('https://project-2-api.herokuapp.com/videos?api_key=' + apiKey)
         .then(response => {
-            let videoStats = results.data;
+            let videoStats = response.data;
             this.setState({
                 VideoDetails: videoStats,
                 videoId: videoStats[0].id,
@@ -34,7 +37,7 @@ class HomePage extends Component {
       getVideoDetails(id) {
         axios.get('https://project-2-api.herokuapp.com/videos/' + id + '?api_key=' + apiKey)
         .then(response => {
-            let videoInfo = results.data;
+            let videoInfo = response.data;
             this.setState({
                 videoInfo: videoInfo,
             })
@@ -69,13 +72,16 @@ class HomePage extends Component {
     
       render() {
         const activeVideo = this.state.VideoDetails.findIndex(element => element.id === this.state.videoId);
-      
+        if( !this.state.videoId) {
+          return null
+        }
         return (
           <div>
-          <Header />
-          <Video activeVideo={VideoDetails[activeVideo]} />
-          <UnderVideo activeVideo={VideoDetails[activeVideo]} newId={this.newId} sideVideos={SideVideos}/>
+          <Video activeVideo={this.state.VideoDetails[activeVideo]} />
+          <UnderVideo activeVideo={this.state.VideoDetails[activeVideo]} newId={this.newId} sideVideos={this.state.VideoDetails} routerProps={this.props} videoInfo={this.state.videoInfo}/>
           </div>
         )
       }
 }
+
+export default HomePage

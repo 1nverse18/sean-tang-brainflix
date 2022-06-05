@@ -1,36 +1,24 @@
 import Header from './components/Header/Header';
 import './App.css';
-import VideoDetails from './data/video-details.json';
-import SideVideos from './data/videos.json';
+import React from 'react';
 import { Component } from 'react';
-import Video from './components/Video/Video';
-import UnderVideo from './components/UnderVideo/UnderVideo';
+import HomePage from './components/HomePage/HomePage';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import UploadPage from './components/UploadPage/UploadPage';
 
-class App extends Component {
-
-  newId = (id) => {
-    this.setState({videoId: id})
-  }
-
-  state = {
-    videoId: VideoDetails[0].id
-  };
-
-  componentDidMount() {
-    document.title = "Sean Tang Brainflix"; 
- }
-
-  render() {
-    const activeVideo = VideoDetails.findIndex(element => element.id === this.state.videoId);
-  
+function App() {
     return (
+    <BrowserRouter>
       <div>
       <Header />
-      <Video activeVideo={VideoDetails[activeVideo]} />
-      <UnderVideo activeVideo={VideoDetails[activeVideo]} newId={this.newId} sideVideos={SideVideos}/>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/upload" component={UploadPage} />
+        <Route path="/:id" component={HomePage} />
+      </Switch>
       </div>
+      </BrowserRouter>
     )
   }
-}
 
 export default App;
