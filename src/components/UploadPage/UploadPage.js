@@ -16,7 +16,7 @@ class UploadPage extends Component {
         <div className="upload-video">
             <h1 className="upload-video__title">Upload Video</h1>
             <h1 className="upload-video__thumbnail-title">VIDEO THUMBNAIL</h1>
-            <div>
+            <div className="upload-video__desktop">
                 <img src={Thumbnail} className="upload-video__thumbnail"/>
                 <form className="upload-video__form">
                     <div className="upload-video__input-field">
@@ -26,16 +26,19 @@ class UploadPage extends Component {
                     <div className="upload-video__form">
                         <label form="description">Add a Video Desctiption</label>
                         <textarea name="description" id="description" placeholder="Add a description to your video"></textarea>
-                    </div>
-                    <Link to="/" className="publish-button">
+                    </div> 
+                </form>
+            </div>
+            <div className="upload-video__bottom-section">
+            <p className="upload-video__bottom-section-tablet">CANCEL</p>
+                    <Link to="/"  className="upload-video__bottom-section-publish">
                         <button type="submit" className="upload-video__button">
                             <img src={UploadIcon} alt="upload-icon"/>
                             <h1>PUBLISH</h1>
                         </button>
                     </Link>
-                    <p>CANCEL</p>
-                </form>
-            </div>
+                    <p className="upload-video__bottom-section-cancel">CANCEL</p>
+                    </div>
         </div>
         )
     }
