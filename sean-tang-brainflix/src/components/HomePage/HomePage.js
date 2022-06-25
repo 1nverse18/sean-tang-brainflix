@@ -15,9 +15,6 @@ class HomePage extends Component {
         videoInfo: []
       };
 
-      newId = (id) => {
-        this.setState({videoId: id})
-      }
 
       getVideo() {
         axios.get('http://localhost:8080/videos?api_key=' + apiKey)
