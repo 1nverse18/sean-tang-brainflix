@@ -6,13 +6,13 @@ import './CommentsInput.scss';
 function CommentsInput(props) {
     return(
         <div className="comments-section__input">
-            <img src={ProfilePhoto} className="comments-section__profile-picture"/>
+            <img src={"http://localhost:8080/images/Mohan-muruge.jpg"} className="comments-section__profile-picture"/>
             <form>
                 <label className="comments-section__title" form="header">JOIN THE CONVERSATION</label>
                 <div className='comments-section__wrapper'>
                 <textarea className="comments-section__input-box" name="input" id="input" placeholder="Add a new comment"></textarea>
                 <button type="submit" className="comments-section__button">
-                    <img src={CommentImage} alt="comments-section__input-icon" />
+                    <img src={"http://localhost:8080/images/add_comment.svg"} alt="comments-section__input-icon" />
                     <h1 className="comments-section__button-text">COMMENT</h1>
                 </button>
                 </div>

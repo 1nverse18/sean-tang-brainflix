@@ -1,9 +1,8 @@
-import ProfilePhoto from '../../assets/images/Mohan-muruge.jpg'
 import './ProfilePicture.scss'
 function ProfilePicture() {
     return (
         <>
-        <img src={ProfilePhoto} className="header__profile-picture"></img>
+        <img src={"http://localhost:8080/images/Mohan-muruge.jpg"} className="header__profile-picture"></img>
         </>
     );
   }

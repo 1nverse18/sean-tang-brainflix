@@ -72,6 +72,12 @@
         padding-right: 8rem;
         margin-top: 1rem;
     }
+    &__cancel {
+        justify-content: left;
+        display: flex;
+        color: #0095FF;
+        font-family: 'AvenirNext LT Pro Demi'; 
+    }
 
     &__bottom-section-cancel {
         color: #0095FF;
@@ -116,19 +122,37 @@
             color: #0095FF;
             font-family: 'AvenirNext LT Pro Demi';
         }
+
+        &__cancel {
+            display: flex;
+            align-items: center;
+            padding-left: 4rem;
+            padding-top: 1rem;   
+            font-size: 1.2rem;         
+        }
     }
 
     @include desktop {
         padding: 0 8rem;
+
         &__desktop {
             display: flex;
-            border-bottom: 1px solid #e1e1e1;
             padding-bottom: 2rem;
+            border-bottom: 1px solid #e1e1e1;
         }
 
         &__thumbnail {
-            width: 30%;
+            width: 35%;
+            height: 100%;
             padding-right: 2rem;
+        }
+
+        &__cancel {
+            margin-top: 3rem;
+        }
+
+        &__button {
+            margin-top: 3rem;
         }
 
         input {

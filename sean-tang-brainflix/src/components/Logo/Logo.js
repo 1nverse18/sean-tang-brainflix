@@ -6,7 +6,7 @@ function Logo() {
     return ( 
         <Link to="/">
         <div className="header__logo">
-        <img src={BrainFlixLogo} ></img>
+        <img src={"http://localhost:8080/images/BrainFlix-logo.svg"} ></img>
         </div>
         </Link>
     );

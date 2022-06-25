@@ -1,7 +1,7 @@
 @use '../../styles/partials/mixins' as *;
 .header {
 &__searchbar {
-    background-image: url(../../assets/images/search.svg);
+    background-image: url("http://localhost:8080/images/Search.svg");
     background-repeat: no-repeat;
     background-position: 3% 50%;
     background-color: #FAFAFA;

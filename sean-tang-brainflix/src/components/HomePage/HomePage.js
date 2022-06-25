@@ -20,7 +20,7 @@ class HomePage extends Component {
       }
 
       getVideo() {
-        axios.get('https://project-2-api.herokuapp.com/videos?api_key=' + apiKey)
+        axios.get('http://localhost:8080/videos?api_key=' + apiKey)
         .then(response => {
             let videoStats = response.data;
             this.setState({
@@ -35,7 +35,7 @@ class HomePage extends Component {
       }
 
       getVideoDetails(id) {
-        axios.get('https://project-2-api.herokuapp.com/videos/' + id + '?api_key=' + apiKey)
+        axios.get('http://localhost:8080/videos/' + id + '?api_key=' + apiKey)
         .then(response => {
             let videoInfo = response.data;
             this.setState({

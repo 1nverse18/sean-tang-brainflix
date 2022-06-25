@@ -16,11 +16,11 @@ function VideoInfo(props) {
             </div>
             <div className="video-info__section-two">
                 <div className="video-info__views">
-                    <img className="video-info__icon" src={viewIcon} />
+                    <img className="video-info__icon" src={"http://localhost:8080/images/views.svg"} />
                     <h2 className="video-info__text">{props.views}</h2>
                 </div>
                 <div className="video-info__likes">
-                    <img className="video-info__icon" src={likeIcon}/>
+                    <img className="video-info__icon" src={"http://localhost:8080/images/likes.svg"}/>
                     <h2 className="video-info__text">{props.likes}</h2>
                 </div>
             </div>
